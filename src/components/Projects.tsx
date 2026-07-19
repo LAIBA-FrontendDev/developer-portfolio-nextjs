@@ -6,13 +6,13 @@ export default function Projects() {
   const projectList = [
     {
       title: "Cafe Website",
-      videoSrc: "/videos/cafe-demo.mp4",
-      liveLink: "https://vercel.app"
+      videoSrc: "/videos/FEB-CAFE.mp4",
+      liveLink:  "   https://february-red.vercel.app/   "
     },
     {
       title: "E-Commerce Website",
-      videoSrc: "/videos/ecommerce-demo.mp4",
-      liveLink: "https://vercel.app"
+      videoSrc: "/videos/23-C.mp4",
+      liveLink: " https://23-c-mi6t.vercel.app/   "
     }
   ];
 

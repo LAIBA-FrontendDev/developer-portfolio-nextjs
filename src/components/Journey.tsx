@@ -3,34 +3,6 @@
 export default function Journey() {
   const headingText = "My Journey".split("");
 
-  const milestones = [
-    {
-      title: "The Unexpected Spark",
-      desc: "Attended a random tech session in 9th grade. Friends left confused, but curiosity planted its seed.",
-      side: "left"
-    },
-    {
-      title: "Left Alone, But Refused to Quit",
-      desc: "The team cancelled the course for being the only student. Turned to YouTube & Google—started self-learning from absolute zero.",
-      side: "right"
-    },
-    {
-      title: "The Pause & The Lightning Hit",
-      desc: "Paused due to 10th-grade board exams. Came back stronger after a random clip reminded me: 'Don't forget why you started.'",
-      side: "left"
-    },
-    {
-      title: "The Triumphant Return",
-      desc: "Mastered Next.js, TypeScript & MongoDB. Built high-quality production apps and proved resilience.",
-      side: "right"
-    },
-    {
-      title: "The Path to Freedom",
-      desc: "Pursuing International Relations in the future, but using Frontend Development right now as my ultimate backbone for independent living.",
-      side: "left"
-    }
-  ];
-
   return (
     <section 
       id="journey" 
@@ -54,39 +26,81 @@ export default function Journey() {
         </h2>
       </div>
 
-      {/* TIMELINE CONTAINER */}
-      <div className="relative w-full max-w-4xl flex flex-col items-center">
+      {/* PARALLEL TIMELINE CONTAINER */}
+      <div className="relative w-full max-w-5xl flex flex-col gap-12 items-center">
         
-        {/* 🪩 CENTRAL NEON GLOW TRACK LINE */}
-        <div className="absolute top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-cyan-500 to-blue-950 shadow-[0_0_15px_rgba(59,130,246,0.7)]" />
+        {/* 🪩 CENTRAL TRACK LINE (Visible on Desktop only for center partition) */}
+        <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-blue-600 via-cyan-500 to-blue-950 shadow-[0_0_15px_rgba(59,130,246,0.7)]" />
 
-        {/* MILESTONE GENERATOR */}
-        <div className="w-full flex flex-col gap-12">
-          {milestones.map((m, idx) => (
-            <div 
-              key={idx} 
-              className={`flex w-full items-center justify-between relative ${
-                m.side === "left" ? "flex-row md:justify-start" : "flex-row-reverse md:justify-end"
-              }`}
-            >
-              {/* Central node track dot connector */}
-              <div className="absolute left-[50%] -translate-x-[50%] w-4 h-4 bg-black border-2 border-cyan-400 rounded-full z-10 transition-all duration-300 group-hover:bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+        {/* 📦 ROW 1: Chapter 1 & 2 Aamne-Saamne */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 w-full relative">
+          {/* Central Dot Node Desktop Indicator */}
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black border-2 border-cyan-400 rounded-full z-10 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+          
+          {/* Left Card */}
+          <div className="bg-zinc-950/80 backdrop-blur-md border border-blue-500/20 p-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-blue group cursor-pointer md:text-right">
+            <h3 className="text-lg font-black text-blue-400 group-hover:text-cyan-300 transition-colors duration-200 tracking-wide mb-2">
+              The Unexpected Spark
+            </h3>
+            <p className="text-zinc-400 group-hover:text-zinc-200 text-sm sm:text-base leading-relaxed font-light">
+              Attended a random tech session in 9th grade. Friends left confused, but curiosity planted its seed.
+            </p>
+          </div>
 
-              {/* Box Element */}
-              <div className="w-[85%] md:w-[45%] bg-zinc-950/80 backdrop-blur-md border border-blue-500/20 p-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-blue group cursor-pointer">
-                <h3 className="text-lg font-black text-white group-hover:text-cyan-300 transition-colors duration-200 tracking-wide mb-2">
-                  {m.title}
-                </h3>
-                <p className="text-zinc-400 group-hover:text-zinc-200 text-sm sm:text-base leading-relaxed font-light">
-                  {m.desc}
-                </p>
-              </div>
-            </div>
-          ))}
+          {/* Right Card */}
+          <div className="bg-zinc-950/80 backdrop-blur-md border border-blue-500/20 p-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-blue group cursor-pointer text-left">
+            <h3 className="text-lg font-black text-blue-400 group-hover:text-cyan-300 transition-colors duration-200 tracking-wide mb-2">
+              Left Alone, But Refused to Quit
+            </h3>
+            <p className="text-zinc-400 group-hover:text-zinc-200 text-sm sm:text-base leading-relaxed font-light">
+              The team cancelled the course for being the only student. Turned to YouTube & Google—started self-learning from absolute zero.
+            </p>
+          </div>
+        </div>
+
+        {/* 📦 ROW 2: Chapter 3 & 4 Aamne-Saamne */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 w-full relative">
+          {/* Central Dot Node Desktop Indicator */}
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black border-2 border-cyan-400 rounded-full z-10 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+
+          {/* Left Card */}
+          <div className="bg-zinc-950/80 backdrop-blur-md border border-blue-500/20 p-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-blue group cursor-pointer md:text-right">
+            <h3 className="text-lg font-black text-blue-400 group-hover:text-cyan-300 transition-colors duration-200 tracking-wide mb-2">
+              The Pause & Board Pressures
+            </h3>
+            <p className="text-zinc-400 group-hover:text-zinc-200 text-sm sm:text-base leading-relaxed font-light">
+              Paused due to 10th-grade board exams. It was frustrating and lonely, but deep inside, I knew I wasn't done.
+            </p>
+          </div>
+
+          {/* Right Card */}
+          <div className="bg-zinc-950/80 backdrop-blur-md border border-blue-500/20 p-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-blue group cursor-pointer text-left">
+            <h3 className="text-lg font-black text-blue-400 group-hover:text-cyan-300 transition-colors duration-200 tracking-wide mb-2">
+              The Triumphant Return
+            </h3>
+            <p className="text-zinc-400 group-hover:text-zinc-200 text-sm sm:text-base leading-relaxed font-light">
+              Mastered Next.js, TypeScript & MongoDB. Built high-quality production apps, polished portfolio, and proved ultimate resilience.
+            </p>
+          </div>
+        </div>
+
+        {/* 👑 ROW 3: Final Goal Statement (Centered Wide Layout at bottom) */}
+        <div className="w-full relative flex justify-center mt-4">
+          <div className="w-full md:max-w-2xl bg-gradient-to-r from-blue-950/30 via-zinc-950 to-blue-950/30 backdrop-blur-md border-2 border-blue-500/30 p-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-cyan group cursor-pointer text-center">
+            <h3 className="text-xl font-black text-white group-hover:text-cyan-300 transition-colors duration-200 tracking-wide mb-3">
+              The Ultimate Vision Ahead
+            </h3>
+            <p className="text-blue-100/80 group-hover:text-white text-sm sm:text-base leading-relaxed font-light">
+              Pursuing International Relations in the future, but using Frontend Development right now as my ultimate backbone for independent living and freedom.
+            </p>
+          </div>
         </div>
 
       </div>
     </section>
   );
 }
+
+
+
 
