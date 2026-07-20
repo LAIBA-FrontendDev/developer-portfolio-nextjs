@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://yourportfolio.com',
+    sitemap: ' https://my-portfolio-hsol-367dncwvt-laiba15.vercel.app/',
   }
 }
