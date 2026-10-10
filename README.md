@@ -4,7 +4,7 @@ My core production-ready professional terminal platform designed to highlight sp
 
 ## 🔗 Project Access
 - **Live Deployment View:** https://my-portfolio-hsol.vercel.app/
-- **GitHub Repository Source:** 
+- **GitHub Repository Source:** https://github.com/LAIBA-FrontendDev/developer-portfolio-nextjs
 ## 🚀 Key Technologies & Stack
 - **Core Framework Engine:** Next.js (App Router Infrastructure)
 - **Typing Strictness:** TypeScript 
